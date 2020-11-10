@@ -10,10 +10,6 @@
         ObjectId("5f9f24c078ea213a25e948c4"), 
         ObjectId("5f9f24c078ea213a25e948a4")
     ], 
-    "savedModules" : [
-        ObjectId("5f9f24c078ea213a25e948eb"), 
-        ObjectId("5f9f253e45899201541088cd")
-    ], 
     "completedModules" : [
         ObjectId("5f9f24c078ea213a25e948de"), 
         ObjectId("5f9f24c078ea213a25e948d0"), 
@@ -30,10 +26,6 @@
             ObjectId("5f9f24c078ea213a25e948c8"), 
             ObjectId("5f9f24c078ea213a25e948c4"), 
             ObjectId("5f9f24c078ea213a25e948a4")
-        ], 
-        "savedModules" : [
-            ObjectId("5f9f24c078ea213a25e948eb"), 
-            ObjectId("5f9f253e45899201541088cd")
         ], 
         "completedModules" : [
             ObjectId("5f9f24c078ea213a25e948de"), 
