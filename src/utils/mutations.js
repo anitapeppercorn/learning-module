@@ -1,6 +1,8 @@
 // Placeholder code ONLY
 import gql from 'graphql-tag';
 
+
+
 export const ADD_USER = gql`
     mutation addUser($username: String!, $email: String!, $password: String!) {
         addUser(username: $username, email: $email, password: $password) {
@@ -130,3 +132,49 @@ export const DISLIKE_MOVIE = gql`
         }
     }
 `;
+
+mutation{
+    updateModule(_id: "5fae8a37320a2e09211f54df",completedModules:"5fae864dddcd990794f9e2f2"){
+    _id
+      completedModules{
+        _id
+      }
+    }
+  }
+
+  mutation{
+    addFriend(_id:"5fae864dddcd990794f9e2ee",friendId:"5faeb7798030b61979cd9474"){
+      userName
+      friends{
+        _id
+      
+      }
+    }
+  }
+
+  mutation{
+    updateUser{
+      _id
+    }
+  }
+
+  mutation{
+    login(email:"saturday@14.com",password:"saturday"){
+      user{
+        _id
+        email
+        friends{
+          _id
+        }
+      }
+    }
+  }
+
+  mutation{
+    addUser(userName:"saturday14",email:"saturday@14.com",password:"saturday"){
+      token
+      user{
+        _id
+      }
+    }
+  }
