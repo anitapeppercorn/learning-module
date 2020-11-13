@@ -1,4 +1,3 @@
-// Placeholder code ONLY
 import gql from 'graphql-tag';
 
 export const ADD_USER = gql`
@@ -22,110 +21,41 @@ export const LOGIN_USER = gql`
                 _id
                 username
                 email
-                likedMovies {
+                completedModules {
                     _id
-                    externalMovieId
                     title
                     overview
                     releaseDate
-                    rating
-                    voteCount
-                    poster
-                    trailer
                 }
-                dislikedMovies{
-                    _id
-                    externalMovieId
-                    title
-                    overview
-                    releaseDate
-                    rating
-                    voteCount
-                    poster
-                    trailer
+                friends {
+                  _id
+                  username
+                  email
                 }
-            }
-        }
+             }
+         }
     }
 `;
 
-export const ADD_MOVIE = gql`
-    mutation addMovie($input: MovieInput!) {
-        addMovie(input:$input) {
+export const ADD_FRIEND = gql`
+    mutation addFriend($userId: ID!, $friendId: ID!) {
+      addFriend(userId: $userId, friendId: $friendId) {
+        userName
+        friends {
             _id
-            externalMovieId
-            title
-            overview
-            releaseDate
-            rating
-            voteCount
-            poster
-            trailer
-            likedUsers {
-                _id
-                username
-            }
-            dislikedUsers {
-                _id
-                username
-            }
         }
-    }
-`
-
-export const LIKE_MOVIE = gql`
-    mutation likeMovie($movieId: ID!) {
-        likeMovie(movieId: $movieId) {
-            likedMovies {
-                _id
-                externalMovieId
-                title
-                overview
-                releaseDate
-                rating
-                voteCount
-                poster
-                trailer
-            }
-            dislikedMovies{
-                _id
-                externalMovieId
-                title
-                overview
-                releaseDate
-                rating
-                voteCount
-                poster
-                trailer
-            }
-        }
+      }
     }
 `;
 
-export const DISLIKE_MOVIE = gql`
-    mutation dislikeMovie($movieId: ID!) {
-        dislikeMovie(movieId: $movieId) {
-            likedMovies {
+export const COMPLETED_MODULE = gql`
+    mutation completedModule($userId: ID!, $moduleId: ID!) {
+        completedModule(userId: $userId, moduleId: $moduleId) {
+            userName
+            completedModules {
                 _id
-                externalMovieId
                 title
                 overview
-                releaseDate
-                rating
-                voteCount
-                poster
-                trailer
-            }
-            dislikedMovies{
-                _id
-                externalMovieId
-                title
-                overview
-                releaseDate
-                rating
-                voteCount
-                poster
-                trailer
             }
         }
     }
