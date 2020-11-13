@@ -36,7 +36,6 @@ function App() {
       <Router>
         <div>
           <Provider store={store}>
-            <Header />
             <Nav />
             <Switch>
               <Route exact path="/" component={HomePage} />
@@ -44,8 +43,8 @@ function App() {
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/modules" component={ModuleViewPage} />
               <Route exact path="/modules/:id" component={LessonViewPage} />
-              <Route exact path="/modules/lessons/:id" component={SectionViewPage} />
-              <Route exact path="/modules/lessons/sections/:id" component={SelectedPageView} />
+              <Route exact path="/modules/:id/lessons/:id" component={SectionViewPage} />
+              <Route exact path="/modules/:id/lessons/:id/sections/:id" component={SelectedPageView} />
               <Route component={NoMatch} />
             </Switch>
             <Footer />
