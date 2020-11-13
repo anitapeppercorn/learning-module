@@ -1,20 +1,23 @@
 {
     "modules": [
-    { 
-    "_id" : ObjectId("5f9f24c078ea213a25e948d0"), 
-    "moduleNumber" : NumberInt(1), 
-    "moduleTitle" : "Practical Rubber Mouse", 
-    "moduleOverview" : "ut et dolores voluptas sit", 
-    "moduleReleaseDate" : ISODate("2020-01-08T21:16:53.913+0000"), 
-    "modulePoster" : ObjectId("5f9f24c078ea213a25e948b3"), 
-    "moduleVideo" : [
-      ObjectId("5f9f24c078ea213a25e948b3"),
-      ObjectId("5f9f24c078ea213a25e948b3")
-      ],
-    "moduleSection" : [
-        ObjectId("5f9f24c078ea213a25e948b3")
-        ]
-    },
+      { 
+        "_id" : ObjectId("5f9f24c078ea213a25e948d0"), 
+        "moduleNumber" : NumberInt(1), 
+        "moduleTitle" : "Practical Rubber Mouse", 
+        "moduleOverview" : "ut et dolores voluptas sit", 
+        "moduleReleaseDate" : ISODate("2020-01-08T21:16:53.913+0000"), 
+        "modulePoster" : ObjectId("5f9f24c078ea213a25e948b3"), 
+        "moduleCategory": "Foundation",
+        "moduleVideo" : [
+          ObjectId("5f9f24c078ea213a25e948b3"),
+          ObjectId("5f9f24c078ea213a25e948b3")
+          ],
+        "moduleSection" : [
+          ObjectId("5f9f24c078ea213a25e948c3"),
+          ObjectId("5f9f24c078ea213a25e948c3"),
+          ObjectId("5f9f24c078ea213a25e948c3")
+            ]
+      },
 
     { 
     "_id" : ObjectId("5f9f24c078ea213a25e948d1"), 
@@ -28,8 +31,10 @@
       ObjectId("5f9f24c078ea213a25e948b3")
       ],
     "moduleSection" : [
+        ObjectId("5f9f24c078ea213a25e948c3"),
+        ObjectId("5f9f24c078ea213a25e948c3"),
         ObjectId("5f9f24c078ea213a25e948c3")
      ]  
     }
   ]
-}
+} 

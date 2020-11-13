@@ -1,21 +1,21 @@
 {
     "users": [
     { 
-    "_id" : ObjectId("5f9f24c078ea213a25e9489e"), 
-    "username" : "user1", 
-    "email" : "user1@gmail.com", 
-    "password" : "password", 
-    "friends" : [
-        ObjectId("5f9f24c078ea213a25e948c8"), 
-        ObjectId("5f9f24c078ea213a25e948c4"), 
-        ObjectId("5f9f24c078ea213a25e948a4")
-    ], 
-    "completedModules" : [
-        ObjectId("5f9f24c078ea213a25e948de"), 
-        ObjectId("5f9f24c078ea213a25e948d0"), 
-        ObjectId("5f9f24c078ea213a25e948fa"), 
-        ObjectId("5f9f253e45899201541088c8")
-    ]
+        "_id" : ObjectId("5f9f24c078ea213a25e9489e"), 
+        "username" : "user1",
+        "email" : "user1@gmail.com", 
+        "password" : "password", 
+        "friends" : [
+            ObjectId("5f9f24c078ea213a25e948c8"), 
+            ObjectId("5f9f24c078ea213a25e948c4"), 
+            ObjectId("5f9f24c078ea213a25e948a4")
+        ], 
+        "completedModules" : [
+            ObjectId("5f9f24c078ea213a25e948de"), 
+            ObjectId("5f9f24c078ea213a25e948d0"), 
+            ObjectId("5f9f24c078ea213a25e948fa"), 
+            ObjectId("5f9f253e45899201541088c8")
+        ]
     },
     { 
         "_id" : ObjectId("5f9f24c078ea213a25e9489f"), 
@@ -36,4 +36,4 @@
     }
   ]
 }
-  
+   

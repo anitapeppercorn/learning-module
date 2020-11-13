@@ -1,7 +1,8 @@
 {
     "paragraphs": [
     { 
-    "_id" : ObjectId("5f9f24c078ea213a25e948d0"), 
+    "_id" : ObjectId("5f9f24c078ea213a25e948d0"),
+    "paragraphRef": "Module X: Section Y",
     "paragraphNumber" : NumberInt(1), 
     "paragraphContent" : "Lorem Ipsum 1111",
     "paragraphPoster" : [
@@ -30,4 +31,4 @@
     "paragraphReleaseDate" : ISODate("2020-09-07T23:08:09.898+0000"), 
     }
   ]
-}
+} 
