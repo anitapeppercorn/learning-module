@@ -2,12 +2,13 @@ import React from 'react';
 import Login from '../components/Login';
 
 
-const Login = () => {
+const HomePage = () => {
     return (
-        <div className="container">
-            <Login />
+        <div>
+          <h2>Welcome to the HomePage!</h2>
+          
         </div>
-    );
-};
+      );
+    }
 
-export default Login;
+export default HomePage;
