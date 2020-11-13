@@ -1,93 +1,80 @@
-// Placeholder code ONLY
 import gql from 'graphql-tag';
 
-export const GET_USER = gql`
+  export const GET_USER_ME = gql`
   {
-    me {
+    user {
       _id
       username
       email
       friends {
         _id
       }
-      likedMovies{
+      completedModules {
         _id
-        externalMovieId
-        rating
-        voteCount
-        title
-        overview
-        releaseDate
-        poster
-        trailer
-        likedUsers {
-          _id
-          username
-        }
-        dislikedUsers {
-          _id
-          username
-        }
       }
-      dislikedMovies{
+  }
+  `;
+  
+  export const GET_ALL_MODULES = gql`
+  {
+    modules {
+      _id
+      moduleNumber
+      moduleTitle
+      moduleOverview
+      modulePoster
+      moduleCategory
+      moduleVideo {
         _id
-        externalMovieId
-        rating
-        voteCount
-        title
-        overview
-        releaseDate
-        poster
-        trailer
-        likedUsers {
+      }
+      moduleLesson {
+        _id
+        lessonNumber
+        lessonTitle
+        lessonSection {
           _id
-          username
-        }
-        dislikedUsers {
-          _id
-          username
+          sectionNumber
+          sectionParagraph {
+            _id
+          }
         }
       }
     }
   }
-`;
+  `;
 
-query{
-  user(email:"", password:""){
-    _id
-    userName
-  }
-}
-
-query{
-  modules{
-    _id
-    moduleNumber
-    moduleTitle
-    moduleOverview
-    modulePoster
-    moduleCategory
-    moduleVideo{
+  export const GET_ALL_LESSONS = gql`
+  {
+    lessons {
       _id
-    }
-    moduleLesson{
-      _id
-      lessonNumber
       lessonTitle
-      lessonSection{
+      lessonTime
+      lessonOverview
+      lessonReleaseDate
+      lessonNumber
+      lessonSection {
         _id
-        sectionNumber
+        sectionOverview
+        sectionTitle
         sectionReleaseDate
-        sectionParagraph{
+        sectionParagraph {
           _id
-        }
+          paragraphRef
+          paragraphNumber
+          paragraphContent
+          paragraphImage
+          paragraphReleaseDate
+          paragraphVideo {
+            _id
+          }
         }
       }
     }
   }
-   
-  query{
-    module(_id:"5fae864dddcd990794f9e2f4"){
+  `;
+
+  export const GET_SELECTED_MODULE = gql` 
+  query getModule($module: ID) {
       _id
       moduleNumber
       moduleTitle
@@ -95,7 +82,7 @@ query{
       moduleReleaseDate
       modulePoster
       moduleCategory
-      moduleVideo{
+      moduleVideo {
         _id
         videoNumber
         videoTitle
@@ -103,91 +90,44 @@ query{
         videoOverview
         videoReleaseDate
       }
-      moduleLesson{
+      moduleLesson {
         _id
         lessonNumber
         lessonTitle
         lessonOverview
         lessonReleaseDate
         lessonTime
-        lessonSection{
+        lessonSection {
           _id
         }
       }
     }
   }
+  `;
 
-  query{
-    lessons{
-      _id
-      lessonTitle
-      lessonTime
-      lessonOverview
-      lessonReleaseDate
-      lessonNumber
-      lessonSection{
-        _id
-        sectionOverview
-        sectionTitle
-        sectionReleaseDate
-        sectionParagraph{
-          _id
-          paragraphRef
-          paragraphNumber
-          paragraphContent
-          paragraphImage
-          paragraphReleaseDate
-          paragraphVideo{
-            _id
-          }
-        }
-      }
-    }
-  }
-
-  query{
-    lesson(_id:"5fae864dddcd990794f9e310"){
+  export const GET_SELECTED_LESSON = gql` 
+  query getLesson($lesson: ID) {
       _id
       lessonTitle
       lessonOverview
       lessonReleaseDate
       lessonTime
-      lessonSection{
+      lessonSection {
         _id
         sectionNumber
         sectionTitle
         sectionOverview
         sectionReleaseDate
-        sectionParagraph{
+        sectionParagraph {
           _id
         }
       }
     }
   }
+  `;
 
-  query{
-    lesson(_id:""){
-      _id
-      lessonNumber
-      lessonTitle
-      lessonOverview
-      lessonReleaseDate
-      lessonTime
-      lessonSection{
-        _id
-        sectionNumber
-        sectionTitle
-        sectionOverview
-        sectionReleaseDate
-        sectionParagraph{
-          _id
-        }
-      }
-    }
-  }
-
-  query{
-    section(_id:"5fae864dddcd990794f9e39a"){
+  export const GET_SELECTED_SECTION = gql` 
+  query getSection($section: ID) {
       _id
       sectionTitle
       sectionNumber
@@ -204,30 +144,6 @@ query{
       }
     }
   }
+  `;
 
-  query {
-    paragraphs {
-      _id
-      paragraphRef
-      paragraphNumber
-      paragraphContent
-      paragraphImage {
-        _id
-        imageNumber
-        imageTitle
-        imageContent
-        imageOverview
-        imageReleaseDate
-      }
-      paragraphReleaseDate
-      paragraphVideo {
-        _id
-        videoTitle
-        videoNumber
-        videoContent
-        videoOverview
-        videoReleaseDate
-      }
-    }
-  }
   
