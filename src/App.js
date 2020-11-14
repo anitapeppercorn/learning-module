@@ -1,21 +1,22 @@
 import React from 'react';
-import {BrowserRoute as Router, Route, Switch } from 'react-router-dom';
+import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
 import Footer from './components/Footer';
-import Nav from './components/Nav';
-import HomePage from './pages/HomePage';
+import Header from './components/Header';
+import Homepage from './pages/Homepage';
 import LessonViewPage from './pages/LessonViewPage';
-import LoginPage from './pages/LoginPage';
+import LoginForm from './pages/LoginForm';
 import ModuleViewPage from './pages/ModuleViewPage';
 import SectionViewPage from './pages/SectionViewPage';
 import SelectedPageView from './pages/SelectedPageView';
 
 import store from './utils/GlobalState';
 import { Provider } from 'react-redux';
-import Signup from '../../../w22/stripe-js-payment-shop/client/src/pages/Signup';
-import NoMatch from '../../../w22/stripe-js-payment-shop/client/src/pages/NoMatch';
+
+import Signup from './pages/SignUpForm';
+import NoMatch from './pages/NoMatch';
 
 const client = new ApolloClient({
   request: (operation) => {
@@ -37,8 +38,8 @@ function App() {
           <Provider store={store}>
             <Header />
             <Switch>
-              <Route exact path="/" component={HomePage} />
-              <Route exact path="/login" component={LoginPage} />
+              <Route exact path="/" component={Homepage} />
+              <Route exact path="/login" component={LoginForm} />
               <Route exact path="/signup" component={Signup} />
               <Route exact path="/modules" component={ModuleViewPage} />
               <Route exact path="/modules/:id" component={LessonViewPage} />

@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import Auth from '../utils/auth';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Modal, Tab } from 'react-bootstrap';
-import SignUpForm from './SignupForm';
-import LoginForm from './LoginForm';
+import SignUpForm from '../pages/SignUpForm';
+import LoginForm from '../pages/LoginForm';
 
 const Header = () => {
     // set modal display state

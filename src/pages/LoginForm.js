@@ -3,7 +3,7 @@ import { useMutation } from '@apollo/react-hooks';
 import { Link } from 'react-router-dom';
 import { LOGIN_USER } from '../utils/mutations';
 
-function LoginPage(props) {
+function LoginForm(props) {
     const [formState, setFormState] = useState({ email: '', password: ''})
     const [login, { error }] = useMutation(LOGIN_USER);
 
@@ -69,4 +69,4 @@ function LoginPage(props) {
     );
 }
 
-export default LoginPage;
+export default LoginForm;

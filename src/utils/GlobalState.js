@@ -17,4 +17,4 @@ const useModuleContext = () => {
     return useContext(ModuleContext);
 };
 
-export { ModuleProvider, useModuleContext };
+export default { ModuleProvider, useModuleContext };
