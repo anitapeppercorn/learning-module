@@ -3,7 +3,6 @@ import {BrowserRoute as Router, Route, Switch } from 'react-router-dom';
 import { ApolloProvider } from '@apollo/react-hooks';
 import ApolloClient from 'apollo-boost';
 
-import Header from './components/Header'; 
 import Footer from './components/Footer';
 import Nav from './components/Nav';
 import HomePage from './pages/HomePage';
@@ -36,7 +35,7 @@ function App() {
       <Router>
         <div>
           <Provider store={store}>
-            <Nav />
+            <Header />
             <Switch>
               <Route exact path="/" component={HomePage} />
               <Route exact path="/login" component={LoginPage} />
