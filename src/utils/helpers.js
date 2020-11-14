@@ -1,4 +1,5 @@
   
+/*
 export function idbPromise(storeName, method, object) {
   return new Promise((resolve, reject) => {
     // open connection to the database `fantinder` with the version of 1
@@ -61,3 +62,4 @@ export function idbPromise(storeName, method, object) {
     };
   });
 }
+*/

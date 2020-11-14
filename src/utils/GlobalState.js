@@ -1,30 +1,20 @@
 import React, { createContext, useContext } from "react";
-import { useMovieReducer } from './reducers';
+import { useModuleReducer } from './reducers';
 
-const FantinderContext = createContext();
-const { Provider } = FantinderContext;
+const ModuleContext = createContext();
+const { Provider } = ModuleContext;
 
-const FantinderProvider = ({ value = [], ...props }) => {
-    const [state, dispatch] = useMovieReducer({
-      likedMovies: [],  // array of movies that were liked
-      dislikedMovies: [],  // array of movies that were disliked
-      movies: [], // array of all movies
-      product: [
-        {
-          quantity: 1,
-          price: null,
-          loading: false,
-          error: null,
-          stripe: null,
-        }
-      ] //array of products
+const ModuleProvider = ({ value = [], ...props }) => {
+    const [state, dispatch] = useModuleReducer({
+      completedModules: [],  // array of modules that were completed
+      modules: [], // array of all movies
     });
     // console.log({state}); // comment this in to test!
     return <Provider value={[state, dispatch]} {...props} />;
   };
 
-const useFantinderContext = () => {
-    return useContext(FantinderContext);
+const ModuleContext = () => {
+    return useContext(ModuleContext);
 };
 
-export { FantinderProvider, useFantinderContext };
+export { ModuleProvider, useModuleContext };
