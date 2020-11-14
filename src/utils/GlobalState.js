@@ -13,7 +13,7 @@ const ModuleProvider = ({ value = [], ...props }) => {
     return <Provider value={[state, dispatch]} {...props} />;
   };
 
-const ModuleContext = () => {
+const useModuleContext = () => {
     return useContext(ModuleContext);
 };
 
