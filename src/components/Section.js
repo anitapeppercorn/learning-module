@@ -1,4 +1,4 @@
-import { AccordionButton } from "@chakra-ui/react";
+import { AccordionButton, AccordionItem, Accordion, AccordionPanel } from "@chakra-ui/react";
 
 const Section = () => {
     return(

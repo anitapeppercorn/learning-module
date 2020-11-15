@@ -1,24 +1,20 @@
 import * as React from "react";
-import { Box, Image, Flex, Badge, Text, Button } from "@chakra-ui/react";
+import { Box, Image, Flex, Badge, Text } from "@chakra-ui/react";
 import { MdStar } from "react-icons/md";
-import { Link } from '@apollo/react-hooks';
 
-
-const Module = (module_item) => {
+const Module = (module) => {
 
     const {
         image,
+        name,
         _id,
         
-    } = module_item;
-
-  return (
+    } = module;
+  return ( 
     <Box p="5" maxW="320px" borderWidth="1px">
-      <Link to={`/module/${_id}`}>
-        <Image borderRadius="md" src={`/images/${image}`} />
-      </Link>
+      <Image borderRadius="md" src={`/images/${image}`} />
       <Flex align="baseline" mt={2}>
-        <Badge colorScheme="pink">Plus</Badge>
+        <Badge colorScheme="pink">First Module</Badge>
         <Text
           ml={2}
           textTransform="uppercase"
@@ -26,22 +22,19 @@ const Module = (module_item) => {
           fontWeight="bold"
           color="pink.800"
         >
-          Verified &bull; Cape Town
+          Time : 30hrs
         </Text>
       </Flex>
       <Text mt={2} fontSize="xl" fontWeight="semibold" lineHeight="short">
-        Modern, Chic Penthouse with Mountain, City & Sea Views
+        Getting Started
       </Text>
-      <Text mt={2}>$119/night</Text>
+      <Text mt={2}>Description of Module</Text>
       <Flex mt={2} align="center">
         <Box as={MdStar} color="orange.400" />
         <Text ml={1} fontSize="sm">
-          <b>4.84</b> (190)
+          <b>1/24 Completed</b>
         </Text>
-      </Flex> 
-      <Button size="lg" colorScheme="green" mt="16px">
-        Start Module
-      </Button>
+      </Flex>
     </Box>
   );
 }

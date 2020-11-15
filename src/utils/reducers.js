@@ -1,22 +1,16 @@
 import { useReducer } from 'react';
 
 // Import actions
-import {
-    UPDATE_MODULES,
-    COMPLETED_MODULES
+import { 
+  COMPLETED_MODULES,
  }
-from './actions';
+from '../utils/actions';
 
 // Add reducers from Store
 export const reducer = (state, action) => {
 
     switch (action.type) {
 
-        case UPDATE_MODULES:
-            return {
-                ...state,
-                modules: [...action.modules],
-            };
         case COMPLETED_MODULES:
             return {
                 ...state,

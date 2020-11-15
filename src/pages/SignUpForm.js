@@ -1,12 +1,12 @@
 import React from 'react';
-import { Heading } from '@chakra-ui/react';
 
-const SignUpForm = () => {
+function SignUpForm(props) {
     return (
         <div>
-          <Heading ml={5}>Welcome to the SignUp Page</Heading>
+            <h1>Signup</h1>
         </div>
-      );
-    }
+    )
+
+};
 
 export default SignUpForm;

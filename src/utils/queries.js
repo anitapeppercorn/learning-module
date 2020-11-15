@@ -12,7 +12,6 @@ import gql from 'graphql-tag';
       completedModules {
         _id
       }
-    }
   }
   `;
   
@@ -40,8 +39,8 @@ import gql from 'graphql-tag';
           }
         }
       }
-      }
     }
+  }
   `;
 
   export const GET_ALL_LESSONS = gql`
@@ -103,7 +102,7 @@ import gql from 'graphql-tag';
         }
       }
     }
-  
+  }
   `;
 
   export const GET_SELECTED_LESSON = gql` 
@@ -124,7 +123,7 @@ import gql from 'graphql-tag';
         }
       }
     }
-  
+  }
   `;
 
   export const GET_SELECTED_SECTION = gql` 
@@ -144,7 +143,7 @@ import gql from 'graphql-tag';
         }
       }
     }
-  
+  }
   `;
 
   
