@@ -1,10 +1,8 @@
 import * as React from "react";
-import { useQuery } from '@apollo/react-hooks'; 
-import { Box, Image, Flex, Badge, Text } from "@chakra-ui/react";
-import { MdStar } from "../../../../w24/src2/components/node_modules/react-icons/md";
+import { Box, Image, Flex, Badge, Text, Button } from "@chakra-ui/react";
+import { MdStar } from "react-icons/md";
+import { Link } from '@apollo/react-hooks';
 
-// import server-side content
-import { GET_ALL_MODULES } from '../utils/queries';
 
 const Module = (module_item) => {
 
@@ -14,13 +12,10 @@ const Module = (module_item) => {
         
     } = module_item;
 
-    const state = useSelector(state => state);
-    const { loading, data} = useQuery(GET_ALL_MODULES);
-
   return (
     <Box p="5" maxW="320px" borderWidth="1px">
       <Link to={`/module/${_id}`}>
-        <Image borderRadius="md" src={`/images/`${image}} />
+        <Image borderRadius="md" src={`/images/${image}`} />
       </Link>
       <Flex align="baseline" mt={2}>
         <Badge colorScheme="pink">Plus</Badge>
@@ -43,7 +38,7 @@ const Module = (module_item) => {
         <Text ml={1} fontSize="sm">
           <b>4.84</b> (190)
         </Text>
-      </Flex>
+      </Flex> 
       <Button size="lg" colorScheme="green" mt="16px">
         Start Module
       </Button>

@@ -15,16 +15,13 @@ import Header from './components/Header';
 
 function App() {
   return (
-    <Router>
-      <div>
+
+     
         <ChakraProvider theme={theme}>
           <Header />
-            <Switch>
-              <Route exact path="/" component={HomePage} />
-            </Switch>
+           
         </ChakraProvider>
-      </div>
-    </Router>
+
   );
 }
 
