@@ -1,10 +1,10 @@
 import React from 'react';
-
+import Module from '../components/Module';
 
 const HomePage = () => {
     return (
         <div>
-          <h2>Welcome to the HomePage!</h2>
+          <Module />
         </div>
       );
     }
