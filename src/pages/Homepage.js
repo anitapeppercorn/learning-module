@@ -1,12 +1,12 @@
 import React from 'react';
-import Module from '../components/Module';
+import { Heading } from '@chakra-ui/react';
 
-const HomePage = () => {
+const Homepage = () => {
     return (
         <div>
-          <Module />
+          <Heading ml={5}>Welcome to the Home Page</Heading>
         </div>
       );
     }
 
-export default HomePage;
+export default Homepage;

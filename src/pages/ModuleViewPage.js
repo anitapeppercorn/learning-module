@@ -1,9 +1,12 @@
 import * as React from "react";
-import { render } from "react-dom";
 import { useQuery } from '@apollo/react-hooks'; 
-import { ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider, 
+    Heading,
+    Box,
+} from "@chakra-ui/react";
 import Module from '../components/Module';
-import { Heading } from "@chakra-ui/core";
+import { idbPromise } from '../utils/helpers';
+import { useDispatch, useSelector } from 'react-redux';
 
 // import server-side content
 import { GET_ALL_MODULES } from '../utils/queries';
@@ -13,7 +16,7 @@ const ModuleViewPage = () => {
 
     const state = useSelector(state => state);
     const { loading, data} = useQuery(GET_ALL_MODULES);
-
+/*
     useEffect(() => {
       if (data) {
         data.modules.forEach((module) => {
@@ -28,7 +31,7 @@ const ModuleViewPage = () => {
         });
       }
     }, [data, loading, dispatch]);
-
+*/
 
     return(
         <div>
